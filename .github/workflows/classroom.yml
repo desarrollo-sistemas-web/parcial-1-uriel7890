@@ -40,11 +40,81 @@ jobs:
         command: php test/ejercicio3_test.php
         timeout: 10
         max-score: 2
+    - name: Ejercicio 4
+      id: ejercicio-4
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 4
+        setup-command: ''
+        command: php test/ejercicio4_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio 5
+      id: ejercicio-5
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 5
+        setup-command: ''
+        command: php test/ejercicio5_test.php
+        timeout: 10
+        max-score: 2
+    - name: Ejercicio 6
+      id: ejercicio-6
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 6
+        setup-command: ''
+        command: php test/ejercicio6_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio 7
+      id: ejercicio-7
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 7
+        setup-command: ''
+        command: php test/ejercicio7_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio 8
+      id: ejercicio-8
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 8
+        setup-command: ''
+        command: php test/ejercicio8_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio 9
+      id: ejercicio-9
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 9
+        setup-command: ''
+        command: php test/ejercicio9_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio 10
+      id: ejercicio-10
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 10
+        setup-command: ''
+        command: php test/ejercicio10_test.php
+        timeout: 10
+        max-score: 2
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         EJERCICIO-1_RESULTS: "${{steps.ejercicio-1.outputs.result}}"
         EJERCICIO-2_RESULTS: "${{steps.ejercicio-2.outputs.result}}"
         EJERCICIO-3_RESULTS: "${{steps.ejercicio-3.outputs.result}}"
+        EJERCICIO-4_RESULTS: "${{steps.ejercicio-4.outputs.result}}"
+        EJERCICIO-5_RESULTS: "${{steps.ejercicio-5.outputs.result}}"
+        EJERCICIO-6_RESULTS: "${{steps.ejercicio-6.outputs.result}}"
+        EJERCICIO-7_RESULTS: "${{steps.ejercicio-7.outputs.result}}"
+        EJERCICIO-8_RESULTS: "${{steps.ejercicio-8.outputs.result}}"
+        EJERCICIO-9_RESULTS: "${{steps.ejercicio-9.outputs.result}}"
+        EJERCICIO-10_RESULTS: "${{steps.ejercicio-10.outputs.result}}"
       with:
-        runners: ejercicio-1,ejercicio-2,ejercicio-3
+        runners: ejercicio-1,ejercicio-2,ejercicio-3,ejercicio-4,ejercicio-5,ejercicio-6,ejercicio-7,ejercicio-8,ejercicio-9,ejercicio-10
