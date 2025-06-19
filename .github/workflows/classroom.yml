@@ -184,6 +184,69 @@ jobs:
         command: php test/ejercicio19_test.php
         timeout: 10
         max-score: 2
+    - name: Ejercicio 20
+      id: ejercicio-20
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 20
+        setup-command: ''
+        command: php test/ejercicio20_test.php
+        timeout: 10
+        max-score: 2
+    - name: Ejercicio 21
+      id: ejercicio-21
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 21
+        setup-command: ''
+        command: php test/ejercicio21_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio 22
+      id: ejercicio-22
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 22
+        setup-command: ''
+        command: php test/ejercicio22_test.php
+        timeout: 10
+        max-score: 3
+    - name: Ejercicio 23
+      id: ejercicio-23
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 23
+        setup-command: ''
+        command: php test/ejercicio23_test.php
+        timeout: 10
+        max-score: 2
+    - name: Ejercicio 24
+      id: ejercicio-24
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 24
+        setup-command: ''
+        command: php test/ejercicio24_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio Estrella
+      id: ejercicio-estrella
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio Estrella
+        setup-command: ''
+        command: php test/ejercicioEstrella_test.php
+        timeout: 10
+        max-score: 10
+    - name: Ejercicio Estrellado
+      id: ejercicio-estrellado
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio Estrellado
+        setup-command: ''
+        command: php test/ejercicioEstrellado_test.php
+        timeout: 10
+        max-score: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
@@ -206,5 +269,12 @@ jobs:
         EJERCICIO-17_RESULTS: "${{steps.ejercicio-17.outputs.result}}"
         EJERCICIO-18_RESULTS: "${{steps.ejercicio-18.outputs.result}}"
         EJERCICIO-19_RESULTS: "${{steps.ejercicio-19.outputs.result}}"
+        EJERCICIO-20_RESULTS: "${{steps.ejercicio-20.outputs.result}}"
+        EJERCICIO-21_RESULTS: "${{steps.ejercicio-21.outputs.result}}"
+        EJERCICIO-22_RESULTS: "${{steps.ejercicio-22.outputs.result}}"
+        EJERCICIO-23_RESULTS: "${{steps.ejercicio-23.outputs.result}}"
+        EJERCICIO-24_RESULTS: "${{steps.ejercicio-24.outputs.result}}"
+        EJERCICIO-ESTRELLA_RESULTS: "${{steps.ejercicio-estrella.outputs.result}}"
+        EJERCICIO-ESTRELLADO_RESULTS: "${{steps.ejercicio-estrellado.outputs.result}}"
       with:
-        runners: ejercicio-1,ejercicio-2,ejercicio-3,ejercicio-4,ejercicio-5,ejercicio-6,ejercicio-7,ejercicio-8,ejercicio-9,ejercicio-10,ejercicio-11,ejercicio-12,ejercicio-13,ejercicio-14,ejercicio-15,ejercicio-16,ejercicio-17,ejercicio-18,ejercicio-19
+        runners: ejercicio-1,ejercicio-2,ejercicio-3,ejercicio-4,ejercicio-5,ejercicio-6,ejercicio-7,ejercicio-8,ejercicio-9,ejercicio-10,ejercicio-11,ejercicio-12,ejercicio-13,ejercicio-14,ejercicio-15,ejercicio-16,ejercicio-17,ejercicio-18,ejercicio-19,ejercicio-20,ejercicio-21,ejercicio-22,ejercicio-23,ejercicio-24,ejercicio-estrella,ejercicio-estrellado
