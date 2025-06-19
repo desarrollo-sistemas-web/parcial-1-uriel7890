@@ -6,4 +6,9 @@
 
 function esMultiplo($a, $b) {
     // Tu código aquí
+    if ($a % $b ==1) {
+        return false;
+    } else {
+        return true;
+    }
 }

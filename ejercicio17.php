@@ -7,4 +7,11 @@
 
 function calcularPromedio($numeros) {
     // Tu código aquí
+
+    if(count($numeros) == 0){
+        return 0;
+    }
+    $promedio = array_sum($numeros) / count($numeros);
+    return $promedio;
+
 }

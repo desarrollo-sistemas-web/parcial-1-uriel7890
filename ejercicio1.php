@@ -5,4 +5,5 @@
 
 function saludar($nombre) {
     // Tu código aquí
+    echo "Hola, $nombre!";
 }

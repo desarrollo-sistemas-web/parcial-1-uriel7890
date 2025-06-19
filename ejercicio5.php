@@ -7,4 +7,6 @@
 
 function suma($numeros) {
     // Tu código aquí
+    return array_sum($numeros);
+    // return $numeros;
 }

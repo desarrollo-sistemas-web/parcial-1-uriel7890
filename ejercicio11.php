@@ -7,5 +7,6 @@
 
 function invertirCadena($cadena) {
     // Tu código aquí
+return strrev($cadena);
 
 }
