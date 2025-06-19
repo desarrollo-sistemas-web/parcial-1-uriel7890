@@ -103,6 +103,87 @@ jobs:
         command: php test/ejercicio10_test.php
         timeout: 10
         max-score: 2
+    - name: Ejercicio 11
+      id: ejercicio-11
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 11
+        setup-command: ''
+        command: php test/ejercicio11_test.php
+        timeout: 10
+        max-score: 3
+    - name: Ejercicio 12
+      id: ejercicio-12
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 12
+        setup-command: ''
+        command: php test/ejercicio12_test.php
+        timeout: 10
+        max-score: 3
+    - name: Ejercicio 13
+      id: ejercicio-13
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 13
+        setup-command: ''
+        command: php test/ejercicio13_test.php
+        timeout: 10
+        max-score: 3
+    - name: Ejercicio 14
+      id: ejercicio-14
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 14
+        setup-command: ''
+        command: php test/ejercicio14_test.php
+        timeout: 10
+        max-score: 3
+    - name: Ejercicio 15
+      id: ejercicio-15
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 15
+        setup-command: ''
+        command: php test/ejercicio15_test.php
+        timeout: 10
+        max-score: 3
+    - name: Ejercicio 16
+      id: ejercicio-16
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 16
+        setup-command: ''
+        command: php test/ejercicio16_test.php
+        timeout: 10
+        max-score: 2
+    - name: Ejercicio 17
+      id: ejercicio-17
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 17
+        setup-command: ''
+        command: php test/ejercicio17_test.php
+        timeout: 10
+        max-score: 2
+    - name: Ejercicio 18
+      id: ejercicio-18
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 18
+        setup-command: ''
+        command: php test/ejercicio18_test.php
+        timeout: 10
+        max-score: 1
+    - name: Ejercicio 19
+      id: ejercicio-19
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Ejercicio 19
+        setup-command: ''
+        command: php test/ejercicio19_test.php
+        timeout: 10
+        max-score: 2
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
@@ -116,5 +197,14 @@ jobs:
         EJERCICIO-8_RESULTS: "${{steps.ejercicio-8.outputs.result}}"
         EJERCICIO-9_RESULTS: "${{steps.ejercicio-9.outputs.result}}"
         EJERCICIO-10_RESULTS: "${{steps.ejercicio-10.outputs.result}}"
+        EJERCICIO-11_RESULTS: "${{steps.ejercicio-11.outputs.result}}"
+        EJERCICIO-12_RESULTS: "${{steps.ejercicio-12.outputs.result}}"
+        EJERCICIO-13_RESULTS: "${{steps.ejercicio-13.outputs.result}}"
+        EJERCICIO-14_RESULTS: "${{steps.ejercicio-14.outputs.result}}"
+        EJERCICIO-15_RESULTS: "${{steps.ejercicio-15.outputs.result}}"
+        EJERCICIO-16_RESULTS: "${{steps.ejercicio-16.outputs.result}}"
+        EJERCICIO-17_RESULTS: "${{steps.ejercicio-17.outputs.result}}"
+        EJERCICIO-18_RESULTS: "${{steps.ejercicio-18.outputs.result}}"
+        EJERCICIO-19_RESULTS: "${{steps.ejercicio-19.outputs.result}}"
       with:
-        runners: ejercicio-1,ejercicio-2,ejercicio-3,ejercicio-4,ejercicio-5,ejercicio-6,ejercicio-7,ejercicio-8,ejercicio-9,ejercicio-10
+        runners: ejercicio-1,ejercicio-2,ejercicio-3,ejercicio-4,ejercicio-5,ejercicio-6,ejercicio-7,ejercicio-8,ejercicio-9,ejercicio-10,ejercicio-11,ejercicio-12,ejercicio-13,ejercicio-14,ejercicio-15,ejercicio-16,ejercicio-17,ejercicio-18,ejercicio-19
